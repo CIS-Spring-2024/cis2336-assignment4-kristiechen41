@@ -1,0 +1,83 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.title-area {
+    background-image: url(../Images/wood.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 220px 0; /* Adjusted padding for top and bottom only */
+}
+
+.homeTitle {
+    font-size: 6em;
+    margin: 0;
+    color: rgb(200, 16, 46);
+}
+
+.titleCaption {
+    font-size: 2.5em;
+    margin: 0;
+    color: rgb(249, 190, 0);
+}
+
+.content-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(136, 139, 141);
+    padding: 50px 75px;
+    padding-top: 175px;
+    border-top: 5px solid #000;
+}
+
+
+.video-container {
+    padding-right: 20px;
+}
+
+.text-container {
+    flex-basis: 50%;
+    padding-left: 20px;
+}
+
+.content-title {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0.5em;
+    font-size: 2.5em;
+}
+
+/* underline */
+.content-title:after {
+    content: '';
+    display: block;
+    width: 75%;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    bottom: -10px;
+}
+
+.content-description {
+    text-align: left;
+    padding: 10px;
+    width: 600px;
+    font-size: 1.25em;
+}
+
+.separator-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.separator-image {
+    position: absolute;
+    bottom: -100px;
+}
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #888c8d;
+            margin: 0;
+            padding: 20px;
+        }
+        .checkout-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select {
+            width: 98%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn {
+            background-color: #c8102e;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-transform: uppercase;
+            width: 100%;
+        }
+        .btn:hover {
+            background-color: #a10d25;
+        }
+        .expiry-date {
+            display: flex;
+            justify-content: left;
+        }
+        .expiry-date select {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="checkout-container">
+    <h1>Checkout</h1>
+    <form action="/process-checkout" method="POST">
+        <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="addressLine">Address Line</label>
+            <input type="text" id="addressLine" name="addressLine" required>
+        </div>
+
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required>
+        </div>
+
+        <div class="form-group">
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" required>
+        </div>
+
+        <div class="form-group">
+            <label for="zipCode">Zip Code</label>
+            <input type="text" id="zipCode" name="zipCode" required pattern="\d*">
+        </div>
+
+        <div class="form-group">
+            <label for="cardNumber">Credit Card Number</label>
+            <input type="text" id="cardNumber" name="cardNumber" required pattern="\d*">
+        </div>
+
+        <div class="form-group">
+            <label for="securityCode">Security Code</label>
+            <input type="text" id="securityCode" name="securityCode" required pattern="\d*">
+        </div>
+
+        <div class="form-group expiry-date">
+            <div>
+                <label for="expiryMonth">Month</label>
+                <select id="expiryMonth" name="expiryMonth" required>
+                </select>
+            </div>
+            <div>
+                <label for="expiryYear">Year</label>
+                <select id="expiryYear" name="expiryYear" required>
+                </select>
+            </div>
+        </div>
+
+        <button type="submit" class="btn">Confirm Order</button>
+    </form>
+</div>
+
+<script>
+    // Populate month and year dropdowns
+    for (let i = 1; i <= 12; i++) {
+        let monthOption = document.createElement('option');
+        monthOption.value = monthOption.textContent = i.toString().padStart(2, '0');
+        document.getElementById('expiryMonth').appendChild(monthOption);
+    }
+    
+    const currentYear = new Date().getFullYear();
+    for (let i = currentYear; i <= currentYear + 10; i++) {
+        let yearOption = document.createElement('option');
+        yearOption.value = yearOption.textContent = i;
+        document.getElementById('expiryYear').appendChild(yearOption);
+    }
+</script>
+
+</body>
+</html>

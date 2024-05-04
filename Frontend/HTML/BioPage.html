@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>Biography - Kristie Chen</title>
+    <style>
+    /* button main design*/
+    .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    background-color:rgb(200, 16, 46);
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    text-decoration: none;
+    }
+
+    /* button hover design*/
+    .button:hover {background-color: rgb(150, 12, 34)}
+
+    .bio-section {                          /*bio whole box encasing*/
+    display: inline-flex;
+    align-items:center;
+    justify-content:space-evenly;
+    margin: 40px;
+    padding: 40px;
+    background-color: rgb(84, 88, 90);
+    }
+  
+    .bio-text {
+    width: 50%;
+    color:rgb(255, 249, 247);
+    }
+  .bio-text p {
+    margin: 10px 0;
+    }
+  
+    .bio-image {
+    width: 30%;
+    }
+  .bio-image img {
+    width: 100%;
+    display: block;
+    }
+   
+    .title {
+    position: relative;
+    display: inline-block;
+    color:rgb(255, 249, 247)
+    }
+
+    .title:after {
+    content: '';
+    display: block;
+    width: 350%; /* length of underline */
+    height: 2px; /* thickness of underline */
+    background: rgb(255, 249, 247); /* The color of the underline */
+    position: absolute;
+    left: -5%; /* Adjusts the starting position of the underline */
+    bottom: -3px; /* Adjusts the vertical position of the underline */
+    }
+    body{
+        background-color: rgb(136, 139, 141);
+        }
+    </style>
+</head>
+<body>
+    <div class="bio-section">
+        <div class="bio-text">
+            <h1 class="title">Kristie Chen</h1>
+            <p>Kristie Chen is the creative director and owner behind Cougar Cafeteria at the University of Houston. She has skillfully blended innovative culinary practices with a vibrant, welcoming atmosphere, making Cougar Cafeteria a beloved spot among students and faculty alike. Her dedication to quality and community engagement has not only elevated the campus dining experience but also set a new standard for university cafeterias nationwide. <br> <br> <br> </p>
+            <a href="homePage.html" class="button">Continue to Site</a>
+        </div>
+        <div class="bio-image">
+            <img src="../Images/bioPic.jpeg">
+          </div>
+    </div>
+</body>
+</html>

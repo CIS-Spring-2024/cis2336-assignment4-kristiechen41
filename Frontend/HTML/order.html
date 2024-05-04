@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order</title>
+    <link rel="stylesheet" href="../CSS/navFooter.css">
+    <link rel="stylesheet" href="../CSS/orderStyle.css">
+</head>
+<body>
+    <header class="header-navbar">
+        <img src="../Images/uhLogo.png" class="navbar-logo">
+        <nav class="navbar">
+            <div class="navbar-item dropdown">
+                <span class="dropbtn">About</span>
+                <div class="dropdown-content">
+                    <a href="careers.html" class="dropbtn">Careers</a>
+                    <a href="hoursLocation.html" class="dropbtn">Hours and Location</a>
+                </div>
+            </div>
+            <div class="navbar-item dropdown">
+                <span class="dropbtn">Contact</span>
+                <div class="dropdown-content">
+                    <a href="feedback.html" class="dropbtn">Feedback</a>
+                    <a href="reachUs.html" class="dropbtn">Reach Us</a>
+                </div>
+            </div>
+            <a href="order.html" class="navbar-item dropbtn">Order</a>
+        </nav>
+    </header>
+    <div id="cart-icon-container">
+        <div id="cart-icon" style="cursor:pointer;">
+            <img src="../Images/cart.png" alt="Cart">
+            <span id="cart-count">0</span>
+        </div>
+    </div>
+    <div id="cart" class="cart-dropdown">
+        <button class="close-cart">X</button>
+        <div class="cart-summary">
+            <div id="subtotal"></div>
+            <div id="tax"></div>
+            <div id="total"></div>
+            <button id="checkout" class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+    <main>
+        <section class="menu-section">
+            <h2 class="section-title">Appetizers</h2>
+            <!-- List of appetizers items -->
+            <div class="item">
+                <img src="../Images/appBuffalo.jpg" >
+                <div class="item-description">
+                    <p>Buffalo Chicken</p>
+                    <p>$5.99</p>
+                </div>
+                <div class="quantity-selector" data-product-id="appBuffalo" data-price="5.99">
+                    <button class="minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="plus">+</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../Images/appGuac.jpg" >
+                <div class="item-description">
+                    <p>Chips & Guac</p>
+                    <p>$3.99</p>
+                </div>
+                <div class="quantity-selector" data-product-id="appGuac" data-price="3.99">
+                    <button class="minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="plus">+</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../Images/appMozz.jpg" >
+                <div class="item-description">
+                    <p>Mozzarella Sticks</p>
+                    <p>$4.99</p>
+                </div>
+                <div class="quantity-selector" data-product-id="appMozz" data-price="4.99">
+                    <button class="minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="plus">+</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../Images/appOnion.jpeg.webp" >
+                <div class="item-description">
+                    <p>Blooming Onion</p>
+                    <p>$6.99</p>
+                </div>
+                <div class="quantity-selector" data-product-id="appOnion" data-price="6.99">
+                    <button class="minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="plus">+</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="menu-section">
+            <h2 class="section-title">Drinks</h2>
+            <div class="item">
+                <img src="../Images/drinkCoke.jpeg.webp" >
+                <div class="item-description">
+                    <p>Coke</p>
+                    <p>$2.99</p>
+                </div>
+                <div class="quantity-selector" data-product-id="coke" data-price="2.99">
+                    <button class="minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="plus">+</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../Images/drinkMilk.webp" >
+                <div class="item-description">
+                    <p>Milk</p>
+                    <p>$3.99</p>
+                </div>
+                <div class="quantity-selector" data-product-id="milk" data-price="3.99">
+                    <button class="minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="plus">+</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../Images/drinkSprite.webp" >
+                <div class="item-description">
+                    <p>Sprite</p>
+                    <p>$2.99</p>
+                </div>
+                <div class="quantity-selector" data-product-id="sprite" data-price="2.99">
+                    <button class="minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="plus">+</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../Images/drinkTea.jpeg" >
+                <div class="item-description">
+                    <p>Tea</p>
+                    <p>$3.99</p>
+                </div>
+                <div class="quantity-selector" data-product-id="tea" data-price="3.99">
+                    <button class="minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="plus">+</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../Images/drinkWater.jpg.avif" >
+                <div class="item-description">
+                    <p>Water</p>
+                    <p>$1.99</p>
+                </div>
+                <div class="quantity-selector" data-product-id="water" data-price="1.99">
+                    <button class="minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="plus">+</button>
+                </div>
+            </div>
+
+        <section class="menu-section">
+            <h2 class="section-title">Desserts</h2>
+            <div class="item">
+                <img src="../Images/dessertPie.jpg" >
+                <div class="item-description">
+                    <p>Pie</p>
+                    <p>$3.99</p>
+                </div>
+                <div class="quantity-selector" data-product-id="pie" data-price="3.99">
+                    <button class="minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="plus">+</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../Images/dessertCheese.jpg" >
+                <div class="item-description">
+                    <p>Cheesecake</p>
+                    <p>$5.99</p>
+                </div>
+                <div class="quantity-selector" data-product-id="dessertCheese" data-price="5.99">
+                    <button class="minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="plus">+</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../Images/dessertCream.jpg" >
+                <div class="item-description">
+                    <p>Ice Cream</p>
+                    <p>$3.99</p>
+                </div>
+                <div class="quantity-selector" data-product-id="dessertCream" data-price="3.99">
+                    <button class="minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="plus">+</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <h2 class="section-title">Soups</h2>
+            <div class="item">
+                <img src="../Images/soupChicken.webp" >
+                <div class="item-description">
+                    <p>Chicken Noodle Soup</p>
+                    <p>$5.99</p>
+                </div>
+                <div class="quantity-selector" data-product-id="chickenSoup" data-price="5.99">
+                    <button class="minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="plus">+</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../Images/soupEgg.jpg" >
+                <div class="item-description">
+                    <p>Egg Drop Soup</p>
+                    <p>$4.99</p>
+                </div>
+                <div class="quantity-selector" data-product-id="eggSoup" data-price="4.99">
+                    <button class="minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="plus">+</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../Images/soupTomato.jpg" >
+                <div class="item-description">
+                    <p>Tomato Soup</p>
+                    <p>$3.99</p>
+                </div>
+                <div class="quantity-selector" data-product-id="tomatoSoup" data-price="3.99">
+                    <button class="minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="plus">+</button>
+                </div>
+            </div>
+        </section>
+        </section>
+
+        <section class="menu-section">
+            <h2 class="section-title">Salads</h2>
+            <div class="item">
+                <img src="../Images/saladCaesar.jpg" alt="Salad">
+                <div class="item-description">
+                    <p>Caesar Salad</p>
+                    <p>$5.99</p>
+                </div>
+                <div class="quantity-selector" data-product-id="salad1" data-price="5.99">
+                    <button class="minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="plus">+</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../Images/saladGarden.jpg" alt="Salad">
+                <div class="item-description">
+                    <p>Garden Salad</p>
+                    <p>$4.99</p>
+                </div>
+                <div class="quantity-selector" data-product-id="salad2" data-price="4.99">
+                    <button class="minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="plus">+</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="social-media-footer">
+        <div class="footer-content">
+            <a href="https://www.facebook.com/uhfoodie" target="_blank">
+                <img src="../Images/fbook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/uhfoodie" target="_blank">
+                <img src="../Images/inst.png" alt="Instagram">
+            </a>
+            <a href="https://www.youtube.com/channel/UCTaXYrG1m00C2dBrMN083Mw" target="_blank">
+                <img src="../Images/ytb.png" alt="Youtube">
+            </a>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var cart = {};
+            const taxRate = 0.08;
+    
+            function updateCartDisplay() {
+                var cartElement = document.getElementById('cart');
+                var cartHtml = '<button class="close-cart">X</button>';
+                var totalCount = 0;
+
+                for (var id in cart) {
+                    var item = cart[id];
+                    if (item.quantity > 0) {
+                        cartHtml += `
+                            <div class="cart-item">
+                                <span>${item.name} x ${item.quantity}</span>
+                                <span class="item-total">$${(item.quantity * item.price).toFixed(2)}</span>
+                            </div>
+                        `;
+                        totalCount += item.quantity;
+                    }
+                }
+    
+                document.getElementById('cart-count').textContent = totalCount;
+    
+                cartElement.innerHTML = cartHtml;
+    
+                calculateTotal();
+            }
+    
+            function calculateTotal() {
+                var subtotal = 0;
+                for (var id in cart) {
+                    subtotal += cart[id].quantity * cart[id].price;
+                }
+                var tax = subtotal * taxRate;
+                var total = subtotal + tax;
+    
+                var cartElement = document.getElementById('cart');
+                cartElement.innerHTML += `
+                    <div class="cart-summary">
+                        <div id="subtotal">Subtotal: $${subtotal.toFixed(2)}</div>
+                        <div id="tax">Tax: $${tax.toFixed(2)}</div>
+                        <div id="total">Total: $${total.toFixed(2)}</div>
+                        <button id="checkout" class="checkout-btn">Checkout</button>
+                    </div>
+                `;
+    
+                document.getElementById('checkout').addEventListener('click', function() {
+                    window.location.href = 'checkout.html';
+                });
+            }
+    
+            document.getElementById('cart-icon').addEventListener('click', function() {
+                var cartElement = document.getElementById('cart');
+                var isHidden = cartElement.style.display === 'none' || cartElement.style.display === '';
+                cartElement.style.display = isHidden ? 'block' : 'none';
+            });
+    
+            document.addEventListener('click', function(event) {
+                if (event.target.classList.contains('close-cart')) {
+                    document.getElementById('cart').style.display = 'none';
+                }
+            });
+    
+            var quantitySelectors = document.querySelectorAll('.quantity-selector');
+            quantitySelectors.forEach(function(selector) {
+                var productId = selector.getAttribute('data-product-id');
+                var price = parseFloat(selector.getAttribute('data-price'));
+                var name = selector.parentNode.querySelector('.item-description p').textContent;
+    
+                selector.querySelector('.plus').addEventListener('click', function() {
+                    updateQuantity(productId, price, name, 1);
+                });
+    
+                selector.querySelector('.minus').addEventListener('click', function() {
+                    updateQuantity(productId, price, name, -1);
+                });
+            });
+    
+            function updateQuantity(productId, price, name, change) {
+                var quantityElement = document.querySelector(`[data-product-id="${productId}"] .quantity`);
+                var quantity = (cart[productId] && cart[productId].quantity) || 0;
+                var newQuantity = quantity + change;
+    
+                if (newQuantity > 0) {
+                    cart[productId] = {quantity: newQuantity, price: price, name: name};
+                } else {
+                    delete cart[productId];
+                }
+    
+                quantityElement.textContent = newQuantity;
+    
+                updateCartDisplay();
+            }
+        });
+    </script>    
+</body>
+</html>
